@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="A fan-made JimmySea appreciation page. Six stories, one sky.">
+<meta name="theme-color" content="#fbf8f1">
+
+<title>JimmySea | A Universe Between Us</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+<div class="shooting-layer" id="shootingLayer" aria-hidden="true"></div>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<header class="top" id="top">
+    <a class="top__logo" href="#home">Jimmy <span>✦</span> Sea</a>
+    <nav class="top__nav" aria-label="Main">
+        <a href="#about">About</a>
+        <a href="#stories">Stories</a>
+        <a href="#wishes">Wishes</a>
+        <a href="#gallery">Gallery</a>
+    </nav>
+</header>
+
+<main id="main">
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="hero__sun" aria-hidden="true"></div>
+        <div class="hero__sea" aria-hidden="true"></div>
+<p class="credit credit--hero">Photo credit to the original owner</p>
+        <div class="portrait" id="portrait">
+            <div class="portrait__orbit" aria-hidden="true"><i></i><i></i></div>
+            <div class="portrait__photo">
+                <img src="jimmysea.jpeg" alt="Jimmy and Sea" data-fallback>
+                <span class="portrait__fallback" aria-hidden="true">☾</span>
+            </div>
+        </div>
+
+        <h1 class="names">
+            <span class="names__jimmy">Jimmy</span>
+            <span class="names__amp" aria-hidden="true">&amp;</span>
+            <span class="names__sea">Sea</span>
+        </h1>
+
+        <p class="hero__lead">
+            A fan-made corner of the sky for Jimmy Jitaraphol and Sea Tawinan,
+            and the stories that stay with us long after the screen goes dark.
+        </p>
+
+        <div class="hero__actions">
+            <a class="btn btn--ink" href="#stories">Explore the stories</a>
+            <button class="btn btn--ghost" id="heroWish" type="button">✦ Make a wish</button>
+        </div>
+
+        <ul class="facts" aria-label="At a glance">
+            <li><strong>6</strong><span>stars on the map</span></li>
+            <li><strong id="heroCount">0</strong><span>wishes sent</span></li>
+            <li><strong>2</strong><span>universes, one sky</span></li>
+        </ul>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+        <div class="about__grid">
+            <div class="about__quote reveal">
+                <p class="kicker">Welcome to their universe</p>
+                <h2>Every story leaves a little stardust.</h2>
+            </div>
+
+            <div class="about__copy reveal">
+                <p>
+                    Jimmy Jitaraphol and Sea Tawinan are Thai actors known for bringing memorable
+                    characters to life. Their on-screen partnership has taken fans through parallel
+                    universes, quiet moments of hope, and stories about destiny.
+                </p>
+                <p>
+                    This fan page celebrates their work and the characters they've shared with us.
+                    Every drama is another little universe to explore.
+                </p>
+
+                <p class="about__label">Characters on this map</p>
+                <ul class="pairs">
+                    <li>Puen &amp; Talay</li>
+                    <li>Mhok &amp; Day</li>
+                    <li>In &amp; Thapfah</li>
+                    <li>Pongpuen &amp; Pepper</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONSTELLATION -->
+    <section class="stories" id="stories">
+        <div class="head reveal">
+            <p class="kicker">Star chart</p>
+            <h2>Six stories, one sky.</h2>
+            <p>Tap a star to read its story. They're joined in the order they arrived.</p>
+        </div>
+
+        <div class="chart reveal">
+            <div class="map" id="map">
+                <svg class="map__lines" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                    <polyline points="10,70 28,30 46,62 64,24 82,56 92,22"></polyline>
+                </svg>
+
+                <button class="star" type="button" data-i="0" style="--x:10%;--y:70%"><span>Vice Versa</span></button>
+                <button class="star" type="button" data-i="1" style="--x:28%;--y:30%"><span>Our Skyy 2</span></button>
+                <button class="star" type="button" data-i="2" style="--x:46%;--y:62%"><span>Last Twilight</span></button>
+                <button class="star" type="button" data-i="3" style="--x:64%;--y:24%"><span>My Magic Prophecy</span></button>
+                <button class="star star--soon" type="button" data-i="4" style="--x:82%;--y:56%"><span>I Will Always Save You</span></button>
+                <button class="star star--extra" type="button" data-i="5" style="--x:92%;--y:22%"><span>Music &amp; Memories</span></button>
+            </div>
+
+            <article class="panel" id="panel" aria-live="polite">
+                <p class="panel__meta" id="pMeta"></p>
+                <h3 id="pTitle"></h3>
+                <p id="pText"></p>
+                <span class="panel__tag" id="pTag"></span>
+            </article>
+        </div>
+
+        <p class="fine">
+            A fan-made guide, not an official filmography. Release schedules and future
+            projects may change, so check GMMTV for official announcements.
+        </p>
+    </section>
+
+    <!-- WISHES -->
+    <section class="wishes" id="wishes">
+        <div class="head reveal">
+            <p class="kicker">Add to the sky</p>
+            <h2>Give the stars something beautiful.</h2>
+            <p>Write a wish and it becomes a star in the sky. Hover or tap a star to read it.</p>
+        </div>
+
+        <div class="wishes__grid">
+            <form class="wish-form reveal" id="wishForm" autocomplete="off">
+                <label for="wishInput">Your wish</label>
+                <textarea id="wishInput" maxlength="120" rows="3" placeholder="May every new story find its audience…"></textarea>
+                <div class="wish-form__meta">
+                    <span id="charCount">0 / 120</span>
+                    <span class="wish-form__error" id="wishError" role="alert"></span>
+                </div>
+                <div class="btn-row">
+                    <button class="btn btn--ink" type="submit">Send my wish</button>
+                    <button class="btn btn--ghost" id="shootBtn" type="button">Shooting star ✧</button>
+                </div>
+                <p class="wish-line" id="wishLine" aria-live="polite">Wishes sent: <strong id="wishCount">0</strong></p>
+            </form>
+
+            <div class="wish-sky reveal" id="wishSky" aria-label="Sky of wishes">
+                <p class="wish-sky__empty" id="wishEmpty">Your first wish will appear here as a star.</p>
+                <button class="wish-sky__clear" id="clearWishes" type="button" hidden>Clear sky</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="gallery" id="gallery">
+        <div class="head reveal">
+            <p class="kicker">Little frames</p>
+            <h2>Memories in soft focus.</h2>
+            <p>Tap a photo to see it bigger.</p>
+        </div>
+
+        <div class="frames">
+    <figure class="frame frame--jimmy reveal">
+        <button type="button" class="frame__open" data-title="Jimmy's Universe" data-caption="A little appreciation for Jimmy Jitaraphol.">
+            <span class="credit">Photo credit to the original owner</span>
+            <span class="frame__img" data-initial="J"><img src="jimmy.jpeg" alt="Jimmy Jitaraphol" loading="lazy" data-fallback></span>
+            <figcaption>Jimmy's Universe ☀</figcaption>
+        </button>
+    </figure>
+    <figure class="frame frame--both reveal">
+        <button type="button" class="frame__open" data-title="The Shared Universe" data-caption="For the stories and characters fans remember.">
+            <span class="credit">Photo credit to the original owner</span>
+            <span class="frame__img" data-initial="♡"><img src="jimmysea-memory.jpeg" alt="Jimmy and Sea" loading="lazy" data-fallback></span>
+            <figcaption>The Shared Universe ♡</figcaption>
+        </button>
+    </figure>
+    <figure class="frame frame--sea reveal">
+        <button type="button" class="frame__open" data-title="Sea's Universe" data-caption="A little appreciation for Sea Tawinan.">
+            <span class="credit">Photo credit to the original owner</span>
+            <span class="frame__img" data-initial="S"><img src="sea.jpeg" alt="Sea Tawinan" loading="lazy" data-fallback></span>
+            <figcaption>Sea's Universe ☁</figcaption>
+        </button>
+    </figure>
+</div>
+    </section>
+
+    <!-- NOTE -->
+    <section class="note" id="note">
+        <div class="note__card reveal">
+            <div class="note__star" aria-hidden="true">✦</div>
+            <p class="kicker">A little note from a fan</p>
+            <h2>For every story still to come.</h2>
+            <p>
+                Some stories find a place in our hearts because of the characters, the performances,
+                or the quiet moments that stay with us long after the final episode.
+            </p>
+            <p>
+                May every new chapter bring fresh opportunities, wonderful memories, and reasons
+                to keep creating. Here's to the stories we've loved and the ones we have yet to discover.
+            </p>
+
+            <button class="btn btn--ghost" id="surpriseBtn" type="button" aria-expanded="false" aria-controls="surprise">
+                Open a little surprise ♡
+            </button>
+            <div class="surprise" id="surprise" hidden>
+                If this little universe could make a wish, it would be for more beautiful stories,
+                more moments of joy, and a sky full of possibilities. 🌷
+                <br><br>
+                Thank you for being part of this little corner of the fandom. ✨
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="foot">
+    <p class="foot__title">A Universe Between Us</p>
+    <p>This is an unofficial fan-made website created for appreciation and educational purposes. It is not affiliated with or endorsed by Jimmy, Sea, or GMMTV. All respective names, characters, and third-party materials belong to their respective owners.</p>
+    <a href="#home">Back to the top ↑</a>
+<br><br>
+	<p>Made with ♡ by Little Code Universe</p>
+</footer>
+
+<dialog class="lightbox" id="lightbox" aria-labelledby="lbTitle">
+    <button class="lightbox__close" id="lbClose" type="button" aria-label="Close">×</button>
+<p class="credit credit--lightbox">Photo credit to the original owner</p>
+    <div class="lightbox__photo" id="lbPhoto" data-initial="♡"><img id="lbImg" alt=""></div>
+    <div class="lightbox__cap">
+        <h3 id="lbTitle"></h3>
+        <p id="lbText"></p>
+    </div>
+</dialog>
+
+<script src="script.js"></script>
+</body>
+</html>
